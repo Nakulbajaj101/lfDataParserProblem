@@ -28,11 +28,15 @@ The section covers tools used to enable the project.
 2. Navigate to the repo's root directory
 3. Build the docker image
 
-`bash docker build . -t parser:latest`
+```bash 
+docker build . -t parser:latest
+```
 
 4. Run docker container
 
-`bash  docker run -it parser:latest `
+```bash  
+docker run -it parser:latest 
+```
 
 # Contact for questions or support
 
