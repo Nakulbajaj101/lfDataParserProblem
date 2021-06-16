@@ -21,7 +21,7 @@ COPY ./run.sh run.sh
 
 # creating a user so only dataparser can run and if someone has root access cannot run the files
 RUN adduser --disabled-password --gecos '' dataparser
-RUN chown -R dataparser: /app/
+RUN chown -R dataparser: ${SOURCE_DIR}/
 USER dataparser
 
 # defining entry point as bash and running the script on starting the container
