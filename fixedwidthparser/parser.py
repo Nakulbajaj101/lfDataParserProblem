@@ -9,8 +9,6 @@ import random
 import struct
 import sys
 
-from faker import Factory
-
 
 def create_fake_data_config(spec_data={}, column_name_key="", prefix="foo"):
     """
@@ -19,7 +17,6 @@ def create_fake_data_config(spec_data={}, column_name_key="", prefix="foo"):
     and outputs a dictionary of the config
     """
     
-    factory = Factory.create()
     return {col:f"{prefix}{index+1}1,{prefix}{index+1}2,{prefix}{index+1}3".split(",") \
             for index, col in enumerate(spec_data[column_name_key])}
 
